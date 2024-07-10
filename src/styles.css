@@ -11,12 +11,14 @@ body {
   }
   
   .patient-list-container {
-    width: 80%;
+    width: 50%;
     margin: 20px auto;
     padding: 20px;
     border: 1px solid #ddd;
     border-radius: 8px;
     background-color: #f9f9f9;
+    align-items: center;
+    text-align: center; 
   }
   
   .patient-list {
@@ -41,10 +43,12 @@ body {
   }
   
   .patient-detail-container {
-    width: 80%;
+    width: 50%;
     margin: 20px auto;
     padding: 20px;
     border: 1px solid #ddd;
+    align-items: center;
+    text-align: center; 
     border-radius: 8px;
     background-color: #f9f9f9;
   }
@@ -55,4 +59,15 @@ body {
   
   .patient-detail-container strong {
     color: #333;
+  }
+
+  .back-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
   }

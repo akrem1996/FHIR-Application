@@ -12,6 +12,7 @@ export interface Patient {
       use: string;
       line: string[];
       city: string;
+      country: string;
       state: string;
       postalCode: string;
     }[];
