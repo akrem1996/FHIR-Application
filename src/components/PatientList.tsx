@@ -1,15 +1,16 @@
 import { fetchPatients } from "../services/fhirService";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { Patient } from "../types";
 import '../styles.css'
 
 const  PatientList = () =>  {
 
-    const [patients, setPatients] = useState<any[]>([])
+    const [patients, setPatients] = useState<Patient[]>([])
 
     useEffect(() => {
         const getPatients = async () => {
-          const data = await fetchPatients();
+          const data: Patient[] = await fetchPatients();
           setPatients(data)
         };
         getPatients();

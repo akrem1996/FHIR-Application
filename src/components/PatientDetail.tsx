@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { fetchPatientById } from '../services/fhirService';
 import { useParams } from 'react-router-dom';
+import { Patient } from "../types";
 import '../styles.css';
 
 
@@ -8,12 +9,12 @@ import '../styles.css';
 const  PatientDetail = () =>  {
 
     const { id }: any = useParams();
-    const [patient, setPatient] = useState<any>(null);
+    const [patient, setPatient] = useState<Patient | null>(null);
 
 
     useEffect(() => {
         const getPatient = async () => {
-          const data = await fetchPatientById(id);
+          const data: Patient = await fetchPatientById(id);
           console.log(data)
           setPatient(data);
         };
